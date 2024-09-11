@@ -1,27 +1,27 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="1" passed="0" failed="1" skipped="0">
+<testng-results ignored="0" total="3" passed="3" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2024-09-11T20:26:38 SAST" name="Default suite" finished-at="2024-09-11T20:26:48 SAST" duration-ms="10693">
+  <suite started-at="2024-09-11T21:16:59 SAST" name="Default suite" finished-at="2024-09-11T21:17:23 SAST" duration-ms="23454">
     <groups>
       <group name="cucumber">
         <method signature="AbstractTestNGCucumberTests.runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:cucumberOptions.TestNGRunner@2df3b89c]" name="runScenario" class="io.cucumber.testng.AbstractTestNGCucumberTests"/>
       </group> <!-- cucumber -->
     </groups>
-    <test started-at="2024-09-11T20:26:38 SAST" name="Default test" finished-at="2024-09-11T20:26:48 SAST" duration-ms="10693">
+    <test started-at="2024-09-11T21:16:59 SAST" name="Default test" finished-at="2024-09-11T21:17:23 SAST" duration-ms="23454">
       <class name="cucumberOptions.TestNGRunner">
-        <test-method is-config="true" signature="setUpClass(org.testng.ITestContext)[pri:0, instance:cucumberOptions.TestNGRunner@2df3b89c]" started-at="2024-09-11T20:26:38 SAST" name="setUpClass" finished-at="2024-09-11T20:26:38 SAST" duration-ms="878" status="PASS">
+        <test-method is-config="true" signature="setUpClass(org.testng.ITestContext)[pri:0, instance:cucumberOptions.TestNGRunner@2df3b89c]" started-at="2024-09-11T21:16:59 SAST" name="setUpClass" finished-at="2024-09-11T21:17:00 SAST" duration-ms="944" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[org.testng.TestRunner@47c7a9e5]]>
+                <![CDATA[org.testng.TestRunner@18d11527]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUpClass -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:cucumberOptions.TestNGRunner@2df3b89c]" started-at="2024-09-11T20:26:38 SAST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2024-09-11T20:26:48 SAST" duration-ms="9406" status="FAIL">
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:cucumberOptions.TestNGRunner@2df3b89c]" started-at="2024-09-11T21:17:00 SAST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2024-09-11T21:17:08 SAST" duration-ms="8168" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -34,26 +34,42 @@
               </value>
             </param>
           </params>
-          <exception class="java.lang.AssertionError">
-            <message>
-              <![CDATA[Incorrect URL expected [https://opensource-demo.orangehrmlive.com/web/index.php/auth/logn] but found [https://opensource-demo.orangehrmlive.com/web/index.php/auth/login]]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[java.lang.AssertionError: Incorrect URL expected [https://opensource-demo.orangehrmlive.com/web/index.php/auth/logn] but found [https://opensource-demo.orangehrmlive.com/web/index.php/auth/login]
-at org.testng.Assert.fail(Assert.java:111)
-at org.testng.Assert.failNotEquals(Assert.java:1578)
-at org.testng.Assert.assertEqualsImpl(Assert.java:150)
-at org.testng.Assert.assertEquals(Assert.java:132)
-at org.testng.Assert.assertEquals(Assert.java:656)
-at stepDefinitions.LoginPageStepDefinition.the_login_page_is_displayed(LoginPageStepDefinition.java:23)
-at ✽.The login page is displayed(file:///C:/Users/nandu/practice-workspace/com.orangehrmlive.demo/src/test/java/features/Login.feature:4)
-]]>
-            </full-stacktrace>
-          </exception> <!-- java.lang.AssertionError -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- runScenario -->
-        <test-method is-config="true" signature="tearDownClass()[pri:0, instance:cucumberOptions.TestNGRunner@2df3b89c]" started-at="2024-09-11T20:26:48 SAST" name="tearDownClass" finished-at="2024-09-11T20:26:48 SAST" duration-ms="359" status="PASS">
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:cucumberOptions.TestNGRunner@2df3b89c]" started-at="2024-09-11T21:17:08 SAST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2024-09-11T21:17:16 SAST" duration-ms="7447" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Negative Login Test"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Login"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:cucumberOptions.TestNGRunner@2df3b89c]" started-at="2024-09-11T21:17:16 SAST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2024-09-11T21:17:22 SAST" duration-ms="6485" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Negative Login Test"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Login"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method is-config="true" signature="tearDownClass()[pri:0, instance:cucumberOptions.TestNGRunner@2df3b89c]" started-at="2024-09-11T21:17:22 SAST" name="tearDownClass" finished-at="2024-09-11T21:17:23 SAST" duration-ms="340" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDownClass -->

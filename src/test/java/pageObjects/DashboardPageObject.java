@@ -3,10 +3,15 @@ package pageObjects;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 
-public class DashboardPageObject extends BasePage{
-	
+public class DashboardPageObject extends BasePage {
+
 	private By dashboard_title = By.xpath("//h6[normalize-space()='Dashboard']");
-	
+	private By menu_admin = By.xpath("//a[contains(@href,'viewAdminModule')]");
+	private By menu_PIM = By.xpath("//a[contains(@href,'viewPIMModule')]");
+	private By menu_Leave = By.xpath("//a[contains(@href,'viewLeaveModule')]");
+	private By menu_Time = By.xpath("//a[contains(@href,'viewTimeModule')]");
+	private By menu_myInfo = By.xpath("//a[contains(@href,'viewMyDetails')]");
+
 	public DashboardPageObject(WebDriver driver) {
 		super(driver);
 	}
@@ -14,5 +19,24 @@ public class DashboardPageObject extends BasePage{
 	public boolean verifyPageTitle() {
 		return driver.findElement(dashboard_title).isDisplayed();
 	}
-	
+
+	public void clickAdminModule() {
+		driver.findElement(menu_admin).click();
+	}
+
+	public void clickPIMModule() {
+		driver.findElement(menu_PIM).click();
+	}
+
+	public void clickLeaveModule() {
+		driver.findElement(menu_Leave).click();
+	}
+
+	public void clickTimeModule() {
+		driver.findElement(menu_Time).click();
+	}
+
+	public void clickMyInfoModule() {
+		driver.findElement(menu_myInfo).click();
+	}
 }

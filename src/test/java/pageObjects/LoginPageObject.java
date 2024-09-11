@@ -12,6 +12,7 @@ public class LoginPageObject extends BasePage {
 	private By txt_username = By.xpath("//input[@placeholder='Username']");
 	private By txt_password =  By.xpath("//input[@placeholder='Password']");
 	private By btn_login = By.xpath("//button[normalize-space()='Login']");
+	private By invalid_Credentials_alert = By.xpath("//div[contains(@class,'alert-content--error')]");
 	
 	public void enterUsername(String username) {
 		driver.findElement(txt_username).sendKeys(username);
@@ -28,6 +29,10 @@ public class LoginPageObject extends BasePage {
 	
 	public String getUrl() {
 		return driver.getCurrentUrl();
+	}
+	
+	public boolean isInvalidCredentialsAlertDisplayed() {
+		return driver.findElement(invalid_Credentials_alert).isDisplayed();
 	}
 
 }

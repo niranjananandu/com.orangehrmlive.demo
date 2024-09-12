@@ -7,6 +7,7 @@ public class PageObjectManager {
 	WebDriver driver;
 	LoginPageObject lpo;
 	DashboardPageObject dpo;
+	RecruitmentPageObject rpo;
 	
 	public PageObjectManager(WebDriver driver) {
 		this.driver= driver;
@@ -22,4 +23,8 @@ public class PageObjectManager {
 		return dpo;
 	}
 
+	public RecruitmentPageObject createRecruitmentPageObject() {
+		rpo = new RecruitmentPageObject(driver);
+		return rpo;
+	}
 }

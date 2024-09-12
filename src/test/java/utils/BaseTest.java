@@ -10,9 +10,7 @@ import org.openqa.selenium.chrome.ChromeDriver;
 
 public class BaseTest {
 	
-	WebDriver driver;
-	
-	
+	WebDriver driver;	
 
 	public WebDriver setUp() throws IOException {	
 		Properties prop = new Properties();

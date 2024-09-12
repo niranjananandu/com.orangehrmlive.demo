@@ -11,11 +11,11 @@ import io.cucumber.testng.CucumberOptions;
 		monochrome = true,
 		plugin= {"com.aventstack.extentreports.cucumber.adapter.ExtentCucumberAdapter:","html:target/cucumber.html","json:target/cucumber.json"})
 public class TestNGRunner extends AbstractTestNGCucumberTests {
-//	
-//	@Override
-//	@DataProvider(parallel=true)
-//	public Object[][] scenarios(){
-//		return super.scenarios();
-//	}
+	
+	@Override
+	@DataProvider(parallel=true)
+	public Object[][] scenarios(){
+		return super.scenarios();
+	}
 
 }

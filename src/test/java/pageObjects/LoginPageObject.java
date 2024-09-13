@@ -9,9 +9,9 @@ public class LoginPageObject extends BasePage {
 		super(driver);
 	}
 	
-	private By txt_username = By.xpath("//input[@placeholder='Username']");
-	private By txt_password =  By.xpath("//input[@placeholder='Password']");
-	private By btn_login = By.xpath("//button[normalize-space()='Login']");
+	private By txt_username = By.xpath("//input[@name='username']");
+	private By txt_password =  By.xpath("//input[@name='password']");
+	private By btn_login = By.xpath("//button[@type='submit']");
 	private By invalid_Credentials_alert = By.xpath("//div[contains(@class,'alert-content--error')]");
 	
 	public void enterUsername(String username) {

@@ -5,11 +5,11 @@ import org.openqa.selenium.WebDriver;
 
 public class DashboardPageObject extends BasePage {
 
-	private By dashboard_title = By.xpath("//h6[normalize-space()='Dashboard']");
+	private By dashboard_title = By.xpath("//div[@class='oxd-topbar-header-title']");
 	private By menu_admin = By.xpath("//a[contains(@href,'viewAdminModule')]");
 	private By menu_PIM = By.xpath("//a[contains(@href,'viewPIMModule')]");
 	private By menu_Leave = By.xpath("//a[contains(@href,'viewLeaveModule')]");
-	private By menu_Time = By.xpath("//a[contains(@href,'viewTimeModule')]");
+	
 	private By menu_myInfo = By.xpath("//a[contains(@href,'viewMyDetails')]");
 
 	public DashboardPageObject(WebDriver driver) {
@@ -32,9 +32,7 @@ public class DashboardPageObject extends BasePage {
 		driver.findElement(menu_Leave).click();
 	}
 
-	public void clickTimeModule() {
-		driver.findElement(menu_Time).click();
-	}
+	
 
 	public void clickMyInfoModule() {
 		driver.findElement(menu_myInfo).click();

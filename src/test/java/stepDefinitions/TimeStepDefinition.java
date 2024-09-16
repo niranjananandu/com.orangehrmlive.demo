@@ -40,8 +40,10 @@ public class TimeStepDefinition {
 	}
 
 	@When("The user adds a new timesheet record")
-	public void the_user_adds_a_new_timesheet_record() throws InterruptedException {
-	   tpo.typeProjectAndSelectFirstOption("Apa");
+	public void the_user_adds_a_new_timesheet_record() {
+	   tpo.typeProject("Apa");
+	   context.utils.sleep(5);
+	   tpo.SelectFirstOption();
 	   tpo.selectActivity();
 	   tpo.enterTimesheet();
 	}

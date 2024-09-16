@@ -49,17 +49,19 @@ public class TimePageObject extends BasePage {
 		driver.findElement(delete_icon).click();
 	}
 	
-	public void typeProjectAndSelectFirstOption(String prompt) throws InterruptedException {
+	public void typeProject(String prompt)  {
 		driver.findElement(input_project).sendKeys(prompt);		
-		wait(ExpectedConditions.visibilityOfElementLocated(first_option), Duration.ofSeconds(10));
-		Thread.sleep(5000);
-		Actions action =  new Actions(driver);
+		waitFor(ExpectedConditions.visibilityOfElementLocated(first_option), Duration.ofSeconds(10));
+	}
+	
+	public void SelectFirstOption()  {
+		Actions action =  new Actions(driver);		
 		action.sendKeys(Keys.ARROW_DOWN).sendKeys(Keys.ENTER).build().perform();
 	}
 	
 	public void selectActivity() {
 		driver.findElement(activity).click();
-		wait(ExpectedConditions.visibilityOfElementLocated(activity_bugFixes), Duration.ofSeconds(10));
+		waitFor(ExpectedConditions.visibilityOfElementLocated(activity_bugFixes), Duration.ofSeconds(10));
 		driver.findElement(activity_bugFixes).click();
 	}
 	

@@ -42,7 +42,12 @@ public class Hooks {
 	}
 
 	@After
-	public void tearDown() {
+	public void tearDown() throws IOException {
+		File folder  =new File(System.getProperty("user.dir")+"//Downloaded Files");
+		if(folder.exists()) {
+			FileUtils.cleanDirectory(folder);
+		}
+		
 		context.driver.quit();
 	}
 

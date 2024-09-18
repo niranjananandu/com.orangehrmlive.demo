@@ -10,6 +10,7 @@ public class PageObjectManager {
 	RecruitmentPageObject rpo;
 	TimePageObject tpo;
 	MaintenancePageObject mpo;
+	AdminPageObject apo;
 	
 	public PageObjectManager(WebDriver driver) {
 		this.driver= driver;
@@ -38,5 +39,11 @@ public class PageObjectManager {
 	public MaintenancePageObject createMaintenancePageObject() {
 		mpo = new MaintenancePageObject(driver);
 		return mpo;
+	}
+	
+
+	public AdminPageObject createAdminPageObject() {
+		apo = new AdminPageObject(driver);
+		return apo;
 	}
 }

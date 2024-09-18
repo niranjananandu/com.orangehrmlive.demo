@@ -1,7 +1,14 @@
 package utils;
 
+import java.io.FileInputStream;
+import java.io.IOException;
 import java.time.Duration;
+import java.util.ArrayList;
+import java.util.List;
 
+import org.apache.poi.xssf.usermodel.XSSFRow;
+import org.apache.poi.xssf.usermodel.XSSFSheet;
+import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 import org.openqa.selenium.WebDriver;
 
 public class TestUtilities {
@@ -45,6 +52,30 @@ public class TestUtilities {
 		data[1] = month;
 		data[2] = dd.replace(String.valueOf('0'), "");
 		return data;
+	}
+	
+	public String[] readExcelData(String filename) throws IOException {
+		FileInputStream file =  new FileInputStream(System.getProperty("user.dir")+"//src//test//resources//Files//"+filename);
+		XSSFWorkbook workbook = new XSSFWorkbook(file);
+		XSSFSheet sheet =  workbook.getSheet("Sheet1");
+		int rows = sheet.getLastRowNum();
+		XSSFRow row =  sheet.getRow(0);
+		int columns =  row.getLastCellNum();
+		String[] arr =  new String[columns];
+	
+		
+			XSSFRow currentRow= sheet.getRow(1);
+			for(int j =0;j<columns;j++) {				
+				try {
+					arr[j]= currentRow.getCell(j).toString();
+				} catch (Exception e) {
+					arr[j] = "";
+				}
+			} 
+			System.out.println(arr);		
+		workbook.close();
+		file.close();
+		return arr;
 	}
 
 }

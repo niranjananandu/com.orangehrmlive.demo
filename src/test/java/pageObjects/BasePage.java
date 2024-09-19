@@ -10,9 +10,11 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 public class BasePage {
 	
 	WebDriver driver;
+
 	
-	public BasePage(WebDriver driver) {
+	public BasePage(WebDriver driver ){
 		this.driver =  driver;
+		
 	}
 	
 	public void waitFor(ExpectedCondition<WebElement> condition, Duration seconds) {

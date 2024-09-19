@@ -75,7 +75,6 @@ public class MaintenancePageObject extends BasePage{
 	}
 	public boolean isFileDownloaded() {
 		File folder  = new File(System.getProperty("user.dir")+"\\Downloaded Files");
-		System.out.println(System.getProperty("user.dir")+"\\Downloaded Files");
 		File[] listOfFiles = folder.listFiles();
 		boolean isFileAvailable = false;
 		for(File file:listOfFiles) {

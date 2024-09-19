@@ -24,16 +24,19 @@ public class RecruitmentStepDefinition{
 	
 	@Given("The user clicks on Recruitment Module")
 	public void the_user_clicks_on_recruitment_module() {
+		context.log.info("Clicking Recruitment Module");
 		rpo.clickRecruitmentModule();
 	}
 
 	@When("The user clicks on the Add button")
 	public void the_user_clicks_on_the_add_button() {
+		context.log.info("Clicking Add button");
 		rpo.clickAddCandidate();
 	}
 
 	@When("The user fills in the Add Candidate form")
 	public void the_user_fills_in_the_add_candidate_form(DataTable dataTable) {
+		context.log.info("Filling in candidate details");
 		List<List<String>> data = dataTable.asLists(String.class);
 		String firstName = data.get(0).get(0);
 		String middleName = data.get(0).get(1);
@@ -62,6 +65,7 @@ public class RecruitmentStepDefinition{
 
 	@When("The user clicks Save on Add Candidate")
 	public void the_user_clicks_save_on_add_candidate() {
+		context.log.info("Clicking Add button");
 	   rpo.clickAddCandidateSave();
 	}
 

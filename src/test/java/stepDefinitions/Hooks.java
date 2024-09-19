@@ -15,6 +15,7 @@ import com.aventstack.extentreports.service.ExtentService;
 
 import io.cucumber.java.After;
 import io.cucumber.java.AfterStep;
+import io.cucumber.java.Before;
 import io.cucumber.java.BeforeAll;
 import io.cucumber.java.Scenario;
 import utils.TestContextSetup;
@@ -28,7 +29,7 @@ public class Hooks {
 	}
 
 	@BeforeAll
-	public static void before_or_after_all() throws IOException {
+	public  static void before_or_after_all() throws IOException {
 		Properties prop = new Properties();
 		FileInputStream file = new FileInputStream(
 				System.getProperty("user.dir") + "\\src\\test\\resources\\config.properties");
@@ -40,6 +41,12 @@ public class Hooks {
 		extent.setSystemInfo("Environment", prop.getProperty("environment"));
 		extent.setSystemInfo("Tester", prop.getProperty("tester"));
 	}
+	
+	@Before
+	public void start() {
+		context.log.info("**********Starting test************");
+
+	}
 
 	@After
 	public void tearDown() throws IOException {
@@ -49,6 +56,8 @@ public class Hooks {
 		}
 		
 		context.driver.quit();
+		context.log.info("**********Test Finished************");
+
 	}
 
 	@AfterStep

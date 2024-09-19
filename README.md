@@ -27,7 +27,7 @@ To install and run this project, follow these steps:
 1. On GitHub.com, navigate to https://github.com/niranjananandu/com.orangehrmlive.demo
 2. Above the list of files, click Code.
 3. Click Download ZIP.
-4. Extract the files and run the run.bat file in the folder (Install any dependencies).
+4. Extract the files and run the run.bat file in the folder (Edit the directory to your local directory. Install any dependencies).
 
 ## Contact
 Name: Niranjana Nandu
